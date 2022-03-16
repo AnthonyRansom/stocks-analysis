@@ -32,8 +32,6 @@ The Reason for the improvement after refactoring the code is a result of changin
 comparing the [original for loop](/Resources/VBA_Challenge_Original_forloop.PNG) to the [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG) it can be noted not only is the code shorter
 but there is no longer a nested for loop instead conditional if statements are used on each row of the dataset in the refactored code
 
-![original for loop](/Resources/VBA_Challenge_Original_forloop.PNG) ![refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG)
-
 
 ## Summary
 When working with code sometimes the logic used throughout the initial development can result in ineffecient code.
