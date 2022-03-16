@@ -38,6 +38,7 @@ Advantages:
  - Allows developers to go back and add notes and comments to better explain what is happening in the code
  - Allows developers to make the code more effecient
  - Allows Developers to move code around to make it easier to find and fix bugs
+
 Disadvantages:
  - Refactoring code takes time to complete and may extend timelines to complete a project
  - Due to the extended time to complete a project may result in additonal costs
