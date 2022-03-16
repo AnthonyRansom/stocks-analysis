@@ -35,6 +35,7 @@ but there is no longer a nested for loop instead conditional if statements are u
 
 The original used a nested for loop looked like the following:
 note: the below is a high level code description, to view the whole code sample with code comments refer to the following - [original for loop](/Resources/VBA_Challenge_Original_forloop.PNG)
+'''
 	For i = 0 To 11
         totalVolume = 0
         ticker = tickers(i)
@@ -50,9 +51,10 @@ note: the below is a high level code description, to view the whole code sample 
                 endingPrice = Cells(j, 6).Value
             End If
         Next j
-
+'''
 The refactored code looks like the below:
 note: the below is a high level code description, to view the whole code sample with code comments refer to the following - [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG)
+'''	
 	For i = 2 To RowCount
         If Cells(i, 1).Value = tickers(tickerIndex) Then
             tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8)
@@ -65,7 +67,7 @@ note: the below is a high level code description, to view the whole code sample 
             tickerIndex = tickerIndex + 1
         End If
     Next i
-
+'''
 
 
 ## Summary
