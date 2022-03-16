@@ -26,8 +26,14 @@ in the long term investment growth.
 ### Execution Time Comparison
 Looking at the executiion time of the analysis between analysiing the 2017 year compared to the 2018 year doesn't show any major differenct between the analysis processing time
 the 2017 year analayis took 0.125 seconds and the 2018 year took about 0.117 both analysis taking less than 1 second to run.
-
 ![2017](/Resources/VBA_Challenge_2017.PNG) ![2018](/Resources/VBA_Challenge_2018.PNG)
+
+The Reason for the improvement after refactoring the code is a result of changing the for loop to only go through the dataset once instead of going through the dataset for each stock ticker
+comparing the [original for loop](/Resources/VBA_Challenge_Original_forloop.PNG) to the [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG) it can be noted not only is the code shorter
+but there is no longer a nested for loop instead conditional if statements are used on each row of the dataset in the refactored code
+
+![original for loop](/Resources/VBA_Challenge_Original_forloop.PNG) ![refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG)
+
 
 ## Summary
 When working with code sometimes the logic used throughout the initial development can result in ineffecient code.
