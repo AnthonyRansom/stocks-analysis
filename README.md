@@ -35,39 +35,39 @@ but there is no longer a nested for loop instead conditional if statements are u
 
 The original used a nested for loop looked like the following:
 note: the below is a high level code description, to view the whole code sample with code comments refer to the following - [original for loop](/Resources/VBA_Challenge_Original_forloop.PNG)
-'''
-	For i = 0 To 11
-        totalVolume = 0
-        ticker = tickers(i)
-            Worksheets(yearValue).Activate
-        For j = 2 To RowCount
-            If Cells(j, 1).Value = ticker Then
-                totalVolume = totalVolume + Cells(j, 8).Value
-            End If
-            If Cells(j, 1).Value = ticker And Cells(j - 1, 1).Value <> ticker Then
-                startingPrice = Cells(j, 6).Value
-            End If
-            If Cells(j, 1).Value = ticker And Cells(j + 1, 1).Value <> ticker Then
-                endingPrice = Cells(j, 6).Value
-            End If
-        Next j
-'''
+```
+For i = 0 To 11
+	totalVolume = 0
+	ticker = tickers(i)
+		Worksheets(yearValue).Activate
+	For j = 2 To RowCount
+		If Cells(j, 1).Value = ticker Then
+			totalVolume = totalVolume + Cells(j, 8).Value
+		End If
+		If Cells(j, 1).Value = ticker And Cells(j - 1, 1).Value <> ticker Then
+			startingPrice = Cells(j, 6).Value
+		End If
+		If Cells(j, 1).Value = ticker And Cells(j + 1, 1).Value <> ticker Then
+			endingPrice = Cells(j, 6).Value
+		End If
+	Next j
+```
 The refactored code looks like the below:
 note: the below is a high level code description, to view the whole code sample with code comments refer to the following - [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG)
-'''	
-	For i = 2 To RowCount
-        If Cells(i, 1).Value = tickers(tickerIndex) Then
-            tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8)
-        End If
-        If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
-            tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
-        End If
-        If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
-            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
-            tickerIndex = tickerIndex + 1
-        End If
-    Next i
-'''
+```
+For i = 2 To RowCount
+	If Cells(i, 1).Value = tickers(tickerIndex) Then
+		tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8)
+	End If
+	If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
+		tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+	End If
+	If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
+		tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+		tickerIndex = tickerIndex + 1
+	End If
+Next i
+```
 
 
 ## Summary
