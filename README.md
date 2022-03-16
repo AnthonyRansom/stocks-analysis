@@ -26,11 +26,46 @@ in the long term investment growth.
 ### Execution Time Comparison
 Looking at the executiion time of the analysis between analysiing the 2017 year compared to the 2018 year doesn't show any major differenct between the analysis processing time
 the 2017 year analayis took 0.125 seconds and the 2018 year took about 0.117 both analysis taking less than 1 second to run.  
+
 ![2017](/Resources/VBA_Challenge_2017.PNG) ![2018](/Resources/VBA_Challenge_2018.PNG)
 
 The Reason for the improvement after refactoring the code is a result of changing the for loop to only go through the dataset once instead of going through the dataset for each stock ticker
 comparing the [original for loop](/Resources/VBA_Challenge_Original_forloop.PNG) to the [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG) it can be noted not only is the code shorter
 but there is no longer a nested for loop instead conditional if statements are used on each row of the dataset in the refactored code
+
+The original used a nested for loop looked like the following:
+note: the below is a high level code description, to view the whole code sample with code comments refer to the following - [original for loop](/Resources/VBA_Challenge_Original_forloop.PNG)
+	For i = 0 To 11
+        totalVolume = 0
+        ticker = tickers(i)
+            Worksheets(yearValue).Activate
+        For j = 2 To RowCount
+            If Cells(j, 1).Value = ticker Then
+                totalVolume = totalVolume + Cells(j, 8).Value
+            End If
+            If Cells(j, 1).Value = ticker And Cells(j - 1, 1).Value <> ticker Then
+                startingPrice = Cells(j, 6).Value
+            End If
+            If Cells(j, 1).Value = ticker And Cells(j + 1, 1).Value <> ticker Then
+                endingPrice = Cells(j, 6).Value
+            End If
+        Next j
+
+The refactored code looks like the below:
+note: the below is a high level code description, to view the whole code sample with code comments refer to the following - [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG)
+	For i = 2 To RowCount
+        If Cells(i, 1).Value = tickers(tickerIndex) Then
+            tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8)
+        End If
+        If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
+            tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+        End If
+        If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
+            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+            tickerIndex = tickerIndex + 1
+        End If
+    Next i
+
 
 
 ## Summary
