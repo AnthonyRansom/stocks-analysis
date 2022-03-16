@@ -30,8 +30,19 @@ the 2017 year analayis took 0.125 seconds and the 2018 year took about 0.117 bot
 ![2017](/Resources/VBA_Challenge_2017.PNG) ![2018](/Resources/VBA_Challenge_2018.PNG)
 
 ## Summary
+When working with code sometimes the logic used throughout the initial development can result in ineffecient code.
+Refactoring code allows a developer to look at the code once it is complete and find ways to make it more effecient.
+some advantages and disadvantages of refactoring code
 
+Advantages:
+ - Allows developers to go back and add notes and comments to better explain what is happening in the code
+ - Allows developers to make the code more effecient
+ - Allows Developers to move code around to make it easier to find and fix bugs
+Disadvantages:
+ - Refactoring code takes time to complete and may extend timelines to complete a project
+ - Due to the extended time to complete a project may result in additonal costs
 
-Summary: In a summary statement, address the following questions.
-What are the advantages or disadvantages of refactoring code?
-How do these pros and cons apply to refactoring the original VBA script?
+Comparing Refactored code to original:
+Refactoring the original code used in the analysis allowed the analyis to be more effecient and consume less resources.
+The original code required the process to go through the entire dataset for all 11 stock tickers compared to the refactored code which only went through the dataset once
+and then went through each stock ticker for each row. This is more effecient on memory as less data needs to be reloaded into each memory for each loop in the for loop.
