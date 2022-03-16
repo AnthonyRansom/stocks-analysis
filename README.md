@@ -33,6 +33,7 @@ The Reason for the improvement after refactoring the code is a result of changin
 comparing the [original for loop](/Resources/VBA_Challenge_Original_forloop.PNG) to the [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG) it can be noted not only is the code shorter
 but there is no longer a nested for loop instead conditional if statements are used on each row of the dataset in the refactored code
 
+The original code shows a nested for loop looping through the entire dataset for all 11 stock tickers
 The original used a nested for loop looked like the following:
 note: the below is a high level code description, to view the whole code sample with code comments refer to the following - [original for loop](/Resources/VBA_Challenge_Original_forloop.PNG)
 ```
@@ -52,6 +53,8 @@ For i = 0 To 11
 		End If
 	Next j
 ```
+
+The refactored code only loos through the dataset once and runs an analyisis of the data in each row removing the need to loop through the dataset again
 The refactored code looks like the below:
 note: the below is a high level code description, to view the whole code sample with code comments refer to the following - [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG)
 ```
