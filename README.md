@@ -33,7 +33,7 @@ the 2017 year analayis took 0.125 seconds and the 2018 year took about 0.117 bot
 When working with code sometimes the logic used throughout the initial development can result in ineffecient code.
 Refactoring code allows a developer to look at the code once it is complete and find ways to make it more effecient.
 
-### Advantages and Disadvantages of Refactoring Code
+### Advantages and Disadvantages of Refactoring Code:
 
 Advantages:
  - Allows developers to go back and add notes and comments to better explain what is happening in the code
