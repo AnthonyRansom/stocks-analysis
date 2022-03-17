@@ -5,16 +5,14 @@
 ## Overview of Project
 
 ### Purpose
-Steve has requested a Excel workbook that will allow him to analyze past stock market performance in order to determine the best stocks for Steve's parents to invest.
-The Excel workbook will provide a simple interface for Steve to easily input the year he would like to analyse and output the Total Daily Volume and return for each stock
-in the dataset.
+Steve has requested an Excel workbook that will allow him to analyze past stock market performance in order to determine the best stocks for Steve's parents to invest.
+The Excel workbook will provide a simple interface for Steve to easily input the year he would like to analyse and output the Total Daily Volume and return for each stock in the dataset.
 
 
 ## Results
 
 ### Stock Performance Results
-Looking at the results of the analysis for the [2017](/Resources/VBA_Challenge_Stocks_2017.PNG) and [2018](/Resources/VBA_Challenge_Stocks_2018.PNG) year indicates a decline in the stocks in 2018.
-the 2017 year showed a good majority in stock prices but the 2018 year showed a decline in most of the stocks.
+Looking at the results of the analysis for the [2017](/Resources/VBA_Challenge_Stocks_2017.PNG) and [2018](/Resources/VBA_Challenge_Stocks_2018.PNG) year indicates a decline in the stocks in 2018. The 2017 year showed positive investment growth for the majority of stock prices but the 2018 year showed a decline in most of the stocks.
 
 The "ENPH" and "RUN" stocks performed well over both the 2017 and 2018 years showing a positive return for both years.
 the DQ stock which Steve's parents invested in showed a very good 199.4% return in the 2017 year but unfortunately the 2018
@@ -25,15 +23,14 @@ in the long term investment growth.
 
 ### Execution Time Comparison
 Looking at the execution time of the analysis between analysing the original code compared to the refactored code shows about an 85% reduction in processing time for both years.
-For this dataset the processing time is still below one second but the more efficient refactored code would make a large difference in larger datasets.
+The processing time for this dataset is still below one second but the more efficient refactored code would make a large difference in larger datasets.
 
 ![2017 Original Code Runtime](/Resources/VBA_Challenge_2017_Orig.PNG) ![2017 Refactored Code Runtime](/Resources/VBA_Challenge_2017.PNG) 
 
 ![2018 Original Code Runtime](/Resources/VBA_Challenge_2018_Orig.PNG) ![2018 Refactored Code Runtime](/Resources/VBA_Challenge_2018.PNG)
 
 The Reason for the improvement after refactoring the code is a result of changing the for loop to only go through the dataset once instead of going through the dataset for each stock ticker.
-Comparing the [original for loop](/Resources/VBA_Challenge_Original_forloop.PNG) to the [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG) it can be noted not only is the code shorter
-but there is no longer a nested for loop, instead conditional if statements are used on each row of the dataset in the refactored code to analyse the data for each row of the dataset.
+Comparing the [original for loop](/Resources/VBA_Challenge_Original_forloop.PNG) to the [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG) it can be noted not only is the code shorter but there is no longer a nested for loop, instead conditional if statements are used on each row of the dataset in the refactored code to analyse the data for each row of the dataset.
 
 The original code shows a nested for loop looping through the entire dataset for all 11 stock tickers. 
  
@@ -93,6 +90,12 @@ Disadvantages:
  - Due to the extended time to complete a project may result in additional costs
 
 ### Comparing Refactored Code to Original:
-Refactoring the original code used in the analysis allowed the analysis  to be more efficient and consume less resources.
-The original code required the process to go through the entire dataset for all 11 stock tickers compared to the refactored code which only went through the dataset once
-and then went through each stock ticker for each row. This is more efficient on memory as less data needs to be reloaded into each memory for each loop in the for loop.
+Refactoring the original code used in the analysis allowed the analysis to be more efficient and consume less resources.
+The original code had the following disadvantages:
+ - The code looped through the data set multiple times consuming more resources than necessary
+ - The code took longer to run than necessary
+
+The refactored code showed the following advantages:
+ - The amount of time to run the analysis was quicker
+ - Consumed resources were less as the analysis only looped through the dataset once
+ - the code was shorted and neater making it easier to understand
