@@ -24,14 +24,16 @@ in the long term investment growth.
 ![2017](/Resources/VBA_Challenge_Stocks_2017.PNG) ![2018](/Resources/VBA_Challenge_Stocks_2018.PNG)
 
 ### Execution Time Comparison
-Looking at the execution time of the analysis between analysing the 2017 year compared to the 2018 year doesn't show any major different between the analysis processing time
-the 2017 year analysis took 0.125 seconds and the 2018 year took about 0.117 both analysis taking less than 1 second to run.  
+Looking at the execution time of the analysis between analysing the original code compared to the refactored code shows about an 85% reduction in processing time for both years.
+For this dataset the processing time is still below one second but the more efficient refactored code would make a large difference in larger datasets.
 
-![2017](/Resources/VBA_Challenge_2017.PNG) ![2018](/Resources/VBA_Challenge_2018.PNG)
+![2017 Original Code Runtime](/Resources/VBA_Challenge_2017_Orig.PNG) ![2017 Refactored Code Runtime](/Resources/VBA_Challenge_2017.PNG) 
 
-The Reason for the improvement after refactoring the code is a result of changing the for loop to only go through the dataset once instead of going through the dataset for each stock ticker
-comparing the [original for loop](/Resources/VBA_Challenge_Original_forloop.PNG) to the [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG) it can be noted not only is the code shorter
-but there is no longer a nested for loop instead conditional if statements are used on each row of the dataset in the refactored code
+![2018 Original Code Runtime](/Resources/VBA_Challenge_2018_Orig.PNG) ![2018 Refactored Code Runtime](/Resources/VBA_Challenge_2018.PNG)
+
+The Reason for the improvement after refactoring the code is a result of changing the for loop to only go through the dataset once instead of going through the dataset for each stock ticker.
+Comparing the [original for loop](/Resources/VBA_Challenge_Original_forloop.PNG) to the [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG) it can be noted not only is the code shorter
+but there is no longer a nested for loop, instead conditional if statements are used on each row of the dataset in the refactored code to analyse the data for each row of the dataset.
 
 The original code shows a nested for loop looping through the entire dataset for all 11 stock tickers. 
  
@@ -55,7 +57,7 @@ For i = 0 To 11
 	Next j
 ```
 
-The refactored code only loos through the dataset once and runs an analysis of the data in each row removing the need to loop through the dataset again.  
+The refactored code only loops through the dataset once and runs an analysis of the data in each row removing the need to loop through the dataset again.  
 
 The refactored code looks like the below:  
 note: the below is a high level code description, to view the whole code sample with code comments refer to the following - [refactored for loop](/Resources/VBA_Challenge_Refactored_forloop.PNG)
