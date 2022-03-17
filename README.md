@@ -90,7 +90,7 @@ Disadvantages:
  - Due to the extended time to complete a project may result in additional costs
 
 ### Comparing Refactored Code to Original:
-Refactoring the original code used in the analysis allowed the analysis to be more efficient and consume less resources.
+Refactoring the original code used in the analysis allowed the analysis to be more efficient and consume less resources.  
 The original code had the following disadvantages:
  - The code looped through the data set multiple times consuming more resources than necessary
  - The code took longer to run than necessary
