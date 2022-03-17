@@ -14,7 +14,7 @@ in the dataset.
 
 ### Stock Performance Results
 Looking at the results of the analysis for the [2017](/Resources/VBA_Challenge_Stocks_2017.PNG) and [2018](/Resources/VBA_Challenge_Stocks_2018.PNG) year indicates a decline in the stocks in 2018.
-the 2017 year showed a good majority in stock prices but the 2018 year showed a decline in most of the stocks.
+the 2017 year showed a good return in the majority of the stock prices but the 2018 year showed a decline in most of the stocks.
 
 The "ENPH" and "RUN" stocks performed well over both the 2017 and 2018 years showing a positive return for both years.
 the DQ stock which Steve's parents invested in showed a very good 199.4% return in the 2017 year but unfortunately the 2018
@@ -24,8 +24,8 @@ in the long term investment growth.
 ![2017](/Resources/VBA_Challenge_Stocks_2017.PNG) ![2018](/Resources/VBA_Challenge_Stocks_2018.PNG)
 
 ### Execution Time Comparison
-Looking at the execution time of the analysis between analysing the 2017 year compared to the 2018 year doesn't show any major different between the analysis processing time
-the 2017 year analysis took 0.125 seconds and the 2018 year took about 0.117 both analysis taking less than 1 second to run.  
+Looking at the execution time of the analysis between analysing the 2017 year compared to the 2018 year doesn't show any major different between the analysis processing time.
+The 2017 year analysis took 0.125 seconds and the 2018 year took about 0.117 both analysis taking less than 1 second to run.  
 
 ![2017](/Resources/VBA_Challenge_2017.PNG) ![2018](/Resources/VBA_Challenge_2018.PNG)
 
